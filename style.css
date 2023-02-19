@@ -1,0 +1,184 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'poppins', sans-serif; 
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+    text-align: left;
+    padding-right: 20px;
+    padding-top: 15px;
+
+}
+.cart-icon{
+    width: 30px;
+    cursor: pointer;
+}
+nav ul{
+    flex: 2;
+    text-align: right;
+    padding-right: 30px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width  0.3s;
+}
+nav ul li a:hover::after{
+    width: 70%;
+} 
+
+.text-box{
+    color: #fff;
+    position: absolute;
+    bottom: 9%;
+}
+.text-box p{
+   font-size: 50px;
+   font-weight: 600;
+}
+.text-box h1{
+    font-size: 190px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite
+}
+@keyframes back{
+    100%{             
+        background-position: 2000px 0;
+    }
+}
+
+
+
+
+.text-box h3{
+    font-size: 40px;
+    font-weight: 500;
+}
+.text-box .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.text-box a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+}
+.social-icons{
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+}
+.social-icons img{
+    width: 25px;
+    display: block;
+    margin: 25px 5px;
+} 
+
+@media screen and (max-width: 600px)
+{
+    .text-box h1{
+        font-size: 30px;
+        line-height: 50px; 
+        right: 1%;
+    }
+    .text-box p{
+        font-size: 30px;
+        line-height: 50px; 
+        right: 1%;
+    }
+    .text-box h3{
+        font-size: 30px;
+        line-height: 30px; 
+        font-weight: 300;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        background-image: url(images/background.png);
+        background-size: cover;
+    }
+    
+    .cart-icon{
+        width: 20px;
+        position: absolute;
+        right: 5%;
+        top: 5%;
+    }
+    .text-box .row{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 1px;
+    }
+    .text-box a{
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 25px;
+        margin-right: 20px;
+        border: 3px solid #fff;
+        margin-top: 30px;
+    }
+    .text-box span{
+        font-size: 20px;
+        line-height: 20px; 
+        font-weight: 100;
+        margin-top: 30px;
+
+    }
+    nav ul{
+        flex: 1;
+        text-align: right;
+        padding-right: 5px;
+    }
+    .fa-brands{
+        position: center;
+    }
+    }
+    
